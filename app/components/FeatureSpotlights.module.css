@@ -25,21 +25,30 @@
 .placeholderVr {
   background-image:
     radial-gradient(circle at 22% 22%, rgba(255, 219, 145, 0.24), transparent 44%),
-    linear-gradient(160deg, #6f5838, #362819 58%, #201710);
+    linear-gradient(160deg, #6f5838, #362819 58%, #201710),
+    url("/images/features/feature-01-vr.jpg");
+  background-size: auto, auto, cover;
+  background-position: center;
 }
 
 /* Placeholder image: ganti background-image dengan screenshot feature Backup milikmu. */
 .placeholderBackup {
   background-image:
     radial-gradient(circle at 78% 18%, rgba(210, 177, 115, 0.23), transparent 46%),
-    linear-gradient(155deg, #5f4b31, #2f2317 58%, #1b130d);
+    linear-gradient(155deg, #5f4b31, #2f2317 58%, #1b130d),
+    url("/images/features/feature-02-backup.jpg");
+  background-size: auto, auto, cover;
+  background-position: center;
 }
 
 /* Placeholder image: ganti background-image dengan screenshot feature File Management milikmu. */
 .placeholderLibrary {
   background-image:
     radial-gradient(circle at 52% 16%, rgba(192, 172, 215, 0.2), transparent 44%),
-    linear-gradient(158deg, #665234, #34271b 58%, #20170f);
+    linear-gradient(158deg, #665234, #34271b 58%, #20170f),
+    url("/images/features/feature-03-library.jpg");
+  background-size: auto, auto, cover;
+  background-position: center;
 }
 
 .overlay {
@@ -83,12 +92,7 @@
 
 .content {
   width: min(580px, 100%);
-  padding: clamp(1.1rem, 2vw, 1.8rem);
-  border-radius: var(--radius-xl);
-  border: 1px solid color-mix(in srgb, var(--logo-gold-100) 22%, transparent);
-  background: color-mix(in srgb, #160f0b 58%, transparent);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  padding: clamp(1.1rem, 2vw, 1.8rem) 0;
 }
 
 .eyebrow {

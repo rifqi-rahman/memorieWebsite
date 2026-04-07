@@ -123,7 +123,7 @@ Gunakan hanya warna berikut, tanpa menambah warna baru di luar list ini.
 
 ### 3.3 Typography
 1. Headline font recommendation: Fraunces or Cormorant Garamond.
-2. Body and UI font recommendation: Manrope or Plus Jakarta Sans.
+2. Body and UI font recommendation: Helvetica Neue or Inter.
 3. Hero size: 48-64 px desktop, 34-42 px mobile.
 4. Section heading size: 30-40 px desktop, 24-30 px mobile.
 5. Body size: 16-18 px.
@@ -370,3 +370,6 @@ Build a production-ready marketing website for Memorie with these requirements:
 4. Terms, Privacy, Support pages live on production domain.
 5. App keys MEMORIE_TERMS_URL and MEMORIE_PRIVACY_URL filled with production URLs.
 6. App release build and archive pass.
+
+
+
