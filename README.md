@@ -1,85 +1,39 @@
-# Memorie Website
+![Memorie Logo](public/AppIcon.png)
 
-Memorie Website is the public home for Memorie: a warm, privacy-first memory app designed to help families keep meaningful stories alive.
+# Memorie
 
-This project includes:
-- A conversion-focused landing page
-- Legal pages: Terms of Service and Privacy Policy
-- A Support page
-- Static export setup ready for Cloudflare Pages
+Memorie adalah ruang hangat untuk menyimpan karya, cerita, dan momen penting keluarga agar bisa selalu dikunjungi kembali.
 
-## Why Memorie
+## Tentang Website Ini
 
-Memorie helps two core user groups:
-- Parents who want to preserve their children’s artwork, letters, and keepsakes in a tidy, meaningful archive
-- Young adults who want to revisit beautiful childhood memories with family, with a long-term vision toward immersive and VR-ready memory experiences
+Website ini dibuat untuk:
+- Mengenal Memorie lebih dekat
+- Membaca halaman legal dan kebijakan
+- Menjadi tempat support, diskusi, Q&A, dan feedback pengguna
 
-## Tech Stack
+## Butuh Bantuan atau Ingin Bertanya?
 
-- Next.js (App Router)
-- TypeScript
-- CSS Modules + global design tokens
-- Static export (`next export` via `output: "export"`)
+Silakan gunakan channel berikut:
+- Discussion: tempat diskusi umum, tanya jawab, dan berbagi ide
+- Q&A: untuk pertanyaan penggunaan atau kendala
+- Ask Developer: tanya langsung ke developer tentang fitur atau roadmap
+- Feedback: ajukan saran perbaikan pengalaman produk
 
-## Local Development
+Jika kamu ingin menghubungi langsung:
+- Email: rifqi.efforts@gmail.com
 
-```bash
-npm install
-npm run dev
-```
+## Halaman Penting
 
-Open `http://localhost:3000`.
+- Support: /support
+- Terms of Service: /terms
+- Privacy Policy: /privacy
 
-## Production Build
+## Deploy ke Cloudflare Pages (Untuk Maintainer)
 
-```bash
-npm run build
-```
+Deploy command proyek ini:
+- npm run build
 
-Static files are generated in the `out` directory.
+Pengaturan yang dipakai:
+- Build output directory: out
+- Node.js version: 20 (recommended)
 
-## Deploy to Cloudflare Pages
-
-Use these settings in Cloudflare Pages:
-
-- Framework preset: `Next.js (static export)` or `None` (manual)
-- Build command: `npm run build`
-- Build output directory: `out`
-- Node.js version: `20` (recommended)
-
-If you use environment variables later, define them in Cloudflare Pages project settings.
-
-## Project Structure
-
-```text
-app/
-  components/      # Landing page UI sections
-  privacy/         # Privacy page
-  support/         # Support page
-  terms/           # Terms page
-public/
-  images/          # Static assets
-```
-
-## Support
-
-We welcome questions, ideas, and feedback.
-
-- GitHub Discussions: enable in this repository and use it as the primary public support channel
-- Email: `rifqi.efforts@gmail.com`
-
-## Content and Legal Note
-
-Legal text in this repository is a product baseline and should be reviewed by a qualified legal professional before release in production.
-
-## Contributing
-
-Contributions are welcome. If you want to suggest copy, UX improvements, or accessibility fixes:
-
-1. Open a Discussion for early feedback
-2. Open an Issue for bugs or feature requests
-3. Submit a Pull Request with clear context and screenshots
-
-## License
-
-Choose and add a license file that matches your intended open-source usage.
