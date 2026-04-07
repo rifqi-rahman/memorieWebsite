@@ -50,30 +50,76 @@ Membuat website yang:
 5. Nostalgic-modern.
 
 ### 3.2 Color palette
-#### Core palette
-1. Memorie Canvas: #F6F1E8
-2. Memorie Sand: #E8DCCB
-3. Memorie Clay: #C9A989
-4. Memorie Moss: #5F6F52
-5. Memorie Ink: #1F1B16
-6. Memorie Fog: #FBF8F4
+Gunakan hanya warna berikut, tanpa menambah warna baru di luar list ini.
 
-#### Dark palette
-1. Memorie Night: #141210
-2. Memorie Charcoal: #1E1A17
-3. Memorie Dust: #BFA58A
-4. Memorie Olive Glow: #8FA07A
-5. Memorie Paper: #F4EEE6
+#### Foundation (Cream)
+1. Foundation: #F8E8C4
+2. Foundation Shade 200: #C6BA9D
+3. Foundation Shade 400: #958B76
+4. Foundation Shade 600: #635D4E
+5. Foundation Shade 800: #322E27
+6. Foundation Tint 200: #F9EDD0
+7. Foundation Tint 400: #FBF1DC
+8. Foundation Tint 600: #FCF6E7
+9. Foundation Tint 800: #FEFAF3
+
+#### Sumptuous Peach (Warm Tan)
+1. Sumptuous Peach: #E5B999
+2. Sumptuous Peach Shade 200: #B7947A
+3. Sumptuous Peach Shade 400: #896F5C
+4. Sumptuous Peach Shade 600: #5C4A3D
+5. Sumptuous Peach Shade 800: #2E251F
+6. Sumptuous Peach Tint 200: #EAC7AD
+7. Sumptuous Peach Tint 400: #EFD5C2
+8. Sumptuous Peach Tint 600: #F5E3D6
+9. Sumptuous Peach Tint 800: #FAF1EB
+
+#### Handmade Red (Muted Mauve)
+1. Handmade Red: #A57576
+2. Handmade Red Shade 200: #845E5E
+3. Handmade Red Shade 400: #634647
+4. Handmade Red Shade 600: #422F2F
+5. Handmade Red Shade 800: #211718
+6. Handmade Red Tint 200: #B79191
+7. Handmade Red Tint 400: #C9ACAD
+8. Handmade Red Tint 600: #DBC8C8
+9. Handmade Red Tint 800: #EDE3E4
+
+#### Red Endive (Deep Plum)
+1. Red Endive: #754B5D
+2. Red Endive Shade 200: #5E3C4A
+3. Red Endive Shade 400: #462D38
+4. Red Endive Shade 600: #2F1E25
+5. Red Endive Shade 800: #170F13
+6. Red Endive Tint 200: #916F7D
+7. Red Endive Tint 400: #AC939E
+8. Red Endive Tint 600: #C8B7BE
+9. Red Endive Tint 800: #E3DBDF
+
+#### Semantic colors
+1. memorieDark: Foundation Shade 800 (#322E27)
+2. memorieCardDark: Handmade Red Tint 400 (#C9ACAD)
+3. memorieLight: Foundation (#F8E8C4)
+4. memorieLightMuted: Foundation Shade 200 (#C6BA9D)
+5. memorieGlow: Foundation (#F8E8C4)
+6. memorieCoral: Sumptuous Peach (#E5B999)
+7. memorieLavender: Handmade Red (#A57576)
+8. memorieTeal: Red Endive (#754B5D)
+
+#### Gradient colors
+1. corridorEdge: Red Endive Shade 600 (#2F1E25)
+2. corridorCenter: Red Endive Tint 200 (#916F7D)
+3. corridorLight: Foundation Tint 800 (#FEFAF3)
 
 #### Semantic token intent
-1. color.bg.primary: Canvas (light) or Night (dark)
-2. color.bg.secondary: Sand (light) or Charcoal (dark)
-3. color.surface.card: Fog (light) or Charcoal elevated (dark)
-4. color.text.primary: Ink (light) or Paper (dark)
-5. color.text.secondary: reduced emphasis of primary text
-6. color.action.primary: Moss (light) or Olive Glow (dark)
-7. color.action.onPrimary: Paper (light) or Night (dark)
-8. color.divider: subtle neutral with minimum contrast 3:1
+1. color.bg.primary: memorieLight (light) or memorieDark (dark)
+2. color.bg.secondary: Foundation Tint 400 (light) or Red Endive Shade 600 (dark)
+3. color.surface.card: Foundation Tint 800 (light) or memorieCardDark (dark)
+4. color.text.primary: Foundation Shade 800 (light) or Foundation Tint 800 (dark)
+5. color.text.secondary: Foundation Shade 600 (light) or Red Endive Tint 600 (dark)
+6. color.action.primary: memorieCoral (light) or memorieTeal (dark)
+7. color.action.onPrimary: Foundation Shade 800 (light) or Foundation Tint 800 (dark)
+8. color.divider: Foundation Shade 400 (light) or Red Endive Tint 400 (dark), minimum contrast 3:1
 
 ### 3.3 Typography
 1. Headline font recommendation: Fraunces or Cormorant Garamond.
@@ -303,8 +349,10 @@ Gunakan prompt ini untuk implementasi landing page:
 Build a production-ready marketing website for Memorie with these requirements:
 1. Use warm, intimate, nostalgic-modern visual direction.
 2. Follow this palette:
-   - Light: #F6F1E8, #E8DCCB, #C9A989, #5F6F52, #1F1B16, #FBF8F4
-   - Dark: #141210, #1E1A17, #BFA58A, #8FA07A, #F4EEE6
+   - Foundation: #F8E8C4, #C6BA9D, #958B76, #635D4E, #322E27, #F9EDD0, #FBF1DC, #FCF6E7, #FEFAF3
+   - Sumptuous Peach: #E5B999, #B7947A, #896F5C, #5C4A3D, #2E251F, #EAC7AD, #EFD5C2, #F5E3D6, #FAF1EB
+   - Handmade Red: #A57576, #845E5E, #634647, #422F2F, #211718, #B79191, #C9ACAD, #DBC8C8, #EDE3E4
+   - Red Endive: #754B5D, #5E3C4A, #462D38, #2F1E25, #170F13, #916F7D, #AC939E, #C8B7BE, #E3DBDF
 3. Use semantic CSS variables for background, surface, text, action, and divider.
 4. Implement sections in this order: Hero, Problem, Solution, Trust, Plan, FAQ, Footer.
 5. Keep copy tone warm, personal, and simple.

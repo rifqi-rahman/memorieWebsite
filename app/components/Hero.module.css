@@ -1,0 +1,294 @@
+.hero {
+  min-height: 100svh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: calc(var(--navbar-height) + var(--space-6)) var(--section-padding-x) var(--space-8);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.container {
+  position: relative;
+  z-index: 3;
+  max-width: var(--max-width);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  max-width: 780px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: clamp(0.85rem, 1.3vw, 1.35rem);
+  padding: 0;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-caption);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: color-mix(in srgb, var(--foundation-tint-800) 92%, transparent);
+  background: color-mix(in srgb, var(--logo-gold-300) 22%, transparent);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  width: fit-content;
+  border: 1px solid color-mix(in srgb, var(--logo-gold-100) 32%, transparent);
+}
+
+.headline {
+  font-family: var(--font-headline);
+  font-size: clamp(2.1rem, 4.8vw, 4.3rem);
+  font-weight: 600;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-text-primary);
+  max-width: 15ch;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.45);
+}
+
+.subtext {
+  font-size: clamp(1.02rem, 1.42vw, 1.24rem);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-relaxed);
+  max-width: 45ch;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.32);
+}
+
+.ctas {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  margin-top: var(--space-4);
+  justify-content: center;
+}
+
+/* Carousel Layer */
+.carouselLayer {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.carouselTrack {
+  display: flex;
+  align-items: flex-end;
+  gap: clamp(1rem, 1.8vw, 2rem);
+  width: max-content;
+  animation: marqueeLoop 48s linear infinite;
+  padding-inline: var(--space-6);
+}
+
+.phoneCard {
+  width: clamp(255px, 20.4vw, 315px);
+  aspect-ratio: 9 / 19;
+  border-radius: 34px;
+  padding: 10px;
+  background: linear-gradient(170deg, #17110c, #3a2c1d);
+  border: 1px solid color-mix(in srgb, var(--logo-gold-200) 32%, transparent);
+  box-shadow: 
+    0 14px 30px rgba(0, 0, 0, 0.34),
+    0 0 0 1px color-mix(in srgb, var(--logo-gold-100) 12%, transparent) inset;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex-shrink: 0;
+  transform:
+    perspective(980px)
+    rotateY(var(--mockup-rotate, 0deg))
+    rotateX(4deg)
+    translateY(var(--mockup-y, 0px))
+    scale(var(--mockup-scale, 1));
+}
+
+.notch {
+  width: 36%;
+  height: 8px;
+  border-radius: 0 0 8px 8px;
+  background: #120d09;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.screen {
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px 14px 14px;
+  border: 1px solid color-mix(in srgb, var(--logo-gold-100) 16%, transparent);
+}
+
+.screenOne {
+  background: linear-gradient(180deg, #5d4a30, #33291e 55%, #221a13);
+}
+
+.screenTwo {
+  background: linear-gradient(180deg, #6d5a3a, #3a2c20 58%, #251d15);
+}
+
+.screenThree {
+  background: linear-gradient(180deg, #5d4c36, #32271d 58%, #221911);
+}
+
+.screenFour {
+  background: linear-gradient(180deg, #6b5331, #3a2c1d 56%, #231a12);
+}
+
+.screenFive {
+  background: linear-gradient(180deg, #5f4c3d, #342920 54%, #231b15);
+}
+
+.screenSix {
+  background: linear-gradient(180deg, #6f5738, #3c2d1f 58%, #261d15);
+}
+
+.screenTopBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.62rem;
+  color: color-mix(in srgb, var(--foundation-tint-800) 86%, transparent);
+  letter-spacing: 0.06em;
+  font-weight: 600;
+}
+
+.screenMedia {
+  margin-top: var(--space-4);
+  border-radius: 14px;
+  height: 62%;
+  border: 1px dashed color-mix(in srgb, var(--logo-gold-100) 42%, transparent);
+  background:
+    linear-gradient(130deg, color-mix(in srgb, var(--logo-gold-200) 24%, transparent), transparent 64%),
+    repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0 8px, rgba(255, 255, 255, 0) 8px 16px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-3);
+}
+
+.screenMedia span {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  color: color-mix(in srgb, var(--foundation-tint-800) 88%, transparent);
+}
+
+.screenCaption {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: var(--space-3);
+}
+
+.screenCaption h3 {
+  font-family: var(--font-headline);
+  font-size: clamp(0.95rem, 1.08vw, 1.1rem);
+  line-height: 1.16;
+  color: var(--foundation-tint-800);
+}
+
+.screenCaption p {
+  font-size: 0.78rem;
+  color: color-mix(in srgb, var(--foundation-tint-800) 86%, transparent);
+  line-height: 1.5;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(
+    180deg,
+    rgba(23, 15, 19, 0) 0%,
+    rgba(23, 15, 19, 0.18) 45%,
+    rgba(23, 15, 19, 0.72) 78%,
+    rgba(23, 15, 19, 1) 100%
+  );
+}
+
+@keyframes marqueeLoop {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 100svh;
+    min-height: 100dvh;
+    padding-top: calc(var(--navbar-height) + var(--space-5));
+    padding-bottom: var(--space-6);
+  }
+
+  .content {
+    padding: 0;
+  }
+
+  .headline {
+    max-width: 12ch;
+    font-size: clamp(1.9rem, 9vw, 2.7rem);
+  }
+
+  .subtext {
+    max-width: 31ch;
+    font-size: 1rem;
+  }
+
+  .ctas {
+    justify-content: center;
+    margin-top: var(--space-2);
+    gap: var(--space-3);
+  }
+
+  .carouselTrack {
+    gap: var(--space-3);
+    animation-duration: 40s;
+  }
+
+  .phoneCard {
+    width: 220px;
+    border-radius: 28px;
+    padding: 8px;
+  }
+
+  .screen {
+    border-radius: 20px;
+    padding: 14px 12px 12px;
+  }
+
+  .screenMedia {
+    margin-top: var(--space-3);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carouselTrack {
+    animation: none;
+  }
+}

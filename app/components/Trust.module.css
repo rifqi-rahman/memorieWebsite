@@ -1,0 +1,103 @@
+.header {
+  text-align: center;
+  margin-bottom: var(--space-10);
+  max-width: var(--max-width-text);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.heading {
+  font-family: var(--font-headline);
+  font-size: clamp(1.95rem, 3.5vw, 2.9rem);
+  font-weight: 600;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  margin-bottom: var(--space-4);
+}
+
+.accent {
+  color: var(--color-action-primary);
+  font-style: normal;
+}
+
+.subtitle {
+  font-size: clamp(1rem, 1.3vw, 1.16rem);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-relaxed);
+  max-width: 34ch;
+  margin: 0 auto;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-5);
+}
+
+.card {
+  padding: clamp(1.1rem, 1.8vw, 1.5rem);
+  border-radius: var(--radius-xl);
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--logo-lilac-200) 7%, transparent), transparent 58%),
+    var(--color-bg-primary);
+  border: 1px solid color-mix(in srgb, var(--logo-gold-300) 16%, var(--color-divider));
+  box-shadow: 0 8px 24px rgba(23, 15, 19, 0.08);
+  transition: transform var(--duration-normal) var(--ease-out),
+              box-shadow var(--duration-normal) var(--ease-out),
+              border-color var(--duration-normal) var(--ease-out);
+}
+
+.cardInset {
+  border-radius: calc(var(--radius-xl) - 8px);
+  padding: clamp(0.5rem, 0.9vw, 0.8rem);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: color-mix(in srgb, var(--logo-gold-300) 44%, transparent);
+}
+
+.iconWrap {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: color-mix(in srgb, var(--logo-gold-300) 20%, transparent);
+  border: 1px solid color-mix(in srgb, var(--logo-gold-100) 26%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-5);
+  color: var(--color-action-primary);
+}
+
+.cardTitle {
+  font-family: var(--font-headline);
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: var(--space-2);
+}
+
+.cardDesc {
+  font-size: 0.96rem;
+  color: var(--color-text-secondary);
+  line-height: 1.55;
+  max-width: 32ch;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .card:hover {
+    transform: none;
+  }
+
+  .cardDesc {
+    max-width: none;
+  }
+}

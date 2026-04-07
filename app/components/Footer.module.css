@@ -1,0 +1,122 @@
+.footer {
+  background: var(--color-bg-secondary);
+  padding: var(--space-16) var(--section-padding-x) var(--space-8);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--space-16);
+  margin-bottom: var(--space-12);
+}
+
+/* Brand */
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.logoIcon {
+  border-radius: var(--radius-sm);
+}
+
+.logoText {
+  font-family: var(--font-headline);
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-text-primary);
+}
+
+.tagline {
+  font-size: var(--text-body);
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
+
+/* Links */
+.links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8);
+}
+
+.linkGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.linkTitle {
+  font-size: var(--text-body-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-tertiary);
+  margin-bottom: var(--space-2);
+}
+
+.linkGroup a {
+  font-size: var(--text-body-sm);
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.linkGroup a:hover {
+  color: var(--color-text-primary);
+}
+
+/* Divider */
+.divider {
+  height: 1px;
+  background: var(--color-divider);
+  margin-bottom: var(--space-6);
+}
+
+/* Bottom */
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright {
+  font-size: var(--text-caption);
+  color: var(--color-text-tertiary);
+}
+
+.madeWith {
+  font-size: var(--text-caption);
+  color: var(--color-text-tertiary);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .top {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+
+  .links {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .bottom {
+    flex-direction: column;
+    gap: var(--space-3);
+    text-align: center;
+  }
+}

@@ -1,0 +1,41 @@
+.section {
+  padding: var(--section-padding-y) var(--section-padding-x);
+  position: relative;
+  min-height: 100svh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  max-width: var(--max-width);
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Backgrounds */
+.primary {
+  background:
+    radial-gradient(circle at 15% 20%, color-mix(in srgb, var(--logo-gold-200) 18%, transparent), transparent 55%),
+    radial-gradient(circle at 85% 75%, color-mix(in srgb, var(--logo-amber-200) 12%, transparent), transparent 52%),
+    var(--color-bg-primary);
+}
+
+.secondary {
+  background:
+    radial-gradient(circle at 80% 18%, color-mix(in srgb, var(--logo-gold-300) 16%, transparent), transparent 55%),
+    var(--color-bg-secondary);
+}
+
+.card {
+  background:
+    radial-gradient(circle at 20% 0%, color-mix(in srgb, var(--logo-lilac-200) 10%, transparent), transparent 45%),
+    var(--color-surface-card);
+}
+
+@media (max-width: 900px) {
+  .section {
+    min-height: 92svh;
+  }
+}
