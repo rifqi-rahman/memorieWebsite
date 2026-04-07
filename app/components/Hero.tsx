@@ -59,11 +59,13 @@ export default function Hero() {
   const t = isIndonesian
     ? {
         headline: "Satu library privat untuk semua memori keluargamu.",
+        subheadline: "Simpan karya, cerita, dan milestone keluarga dalam ruang hangat yang selalu bisa kamu kunjungi lagi.",
         ctaPrimary: "Mulai Gratis",
         ctaSecondary: "Lihat Fitur",
       }
     : {
         headline: "One private library for every family memory.",
+        subheadline: "Preserve artwork, stories, and milestones in one warm space you can revisit anytime.",
         ctaPrimary: "Start Free",
         ctaSecondary: "Explore Features",
       };
@@ -76,6 +78,7 @@ export default function Hero() {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
       tl.from(`.${styles.headline}`, { y: 24, autoAlpha: 0, duration: 0.82 })
+        .from(`.${styles.subheadline}`, { y: 16, autoAlpha: 0, duration: 0.62 }, "<0.12")
         .from(`.${styles.ctas}`, { y: 12, autoAlpha: 0, duration: 0.58 }, "<0.12");
     }, heroRef);
 
@@ -93,6 +96,7 @@ export default function Hero() {
       <div className={styles.container}>
         <div className={styles.content} ref={contentRef}>
           <h1 className={styles.headline}>{t.headline}</h1>
+          <p className={styles.subheadline}>{t.subheadline}</p>
 
           <div className={styles.ctas}>
             <CTAButton
