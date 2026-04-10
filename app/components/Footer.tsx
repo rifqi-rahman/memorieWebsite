@@ -8,6 +8,7 @@ import { useLocale } from "./useLocale";
 
 export default function Footer() {
   const { isIndonesian } = useLocale();
+  const discussionsUrl = "https://github.com/rifqi-rahman/memorieWebsite/discussions";
 
   const t = isIndonesian
     ? {
@@ -80,7 +81,8 @@ export default function Footer() {
             </div>
             <div className={styles.linkGroup}>
               <h4 className={styles.linkTitle}>{t.help}</h4>
-              <Link href="/support/">Support</Link>
+              <a href={discussionsUrl} target="_blank" rel="noopener noreferrer">Support / Q&A</a>
+              <Link href="/support/">Support Page</Link>
               <a href="mailto:rifqi.efforts@gmail.com">rifqi.efforts@gmail.com</a>
             </div>
           </div>

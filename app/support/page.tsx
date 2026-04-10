@@ -9,6 +9,8 @@ export const metadata: Metadata = {
 };
 
 export default function SupportPage() {
+  const discussionsUrl = "https://github.com/rifqi-rahman/memorieWebsite/discussions";
+
   return (
     <>
       <header className={styles.header}>
@@ -95,7 +97,15 @@ export default function SupportPage() {
               Discussions as a public support channel.
             </p>
             <p>
-              Add your repository discussion link here once enabled.
+              Join here:{" "}
+              <a
+                href={discussionsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.emailLink}
+              >
+                github.com/rifqi-rahman/memorieWebsite/discussions
+              </a>
             </p>
           </section>
 
