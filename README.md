@@ -28,12 +28,4 @@ Jika kamu ingin menghubungi langsung:
 - Terms of Service: /terms
 - Privacy Policy: /privacy
 
-## Deploy ke Cloudflare Pages (Untuk Maintainer)
-
-Deploy command proyek ini:
-- npm run build
-
-Pengaturan yang dipakai:
-- Build output directory: out
-- Node.js version: 20 (recommended)
 
